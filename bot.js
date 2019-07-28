@@ -10,9 +10,12 @@ client.on('message', message => {
     	message.reply('pong');
   	}
 });
+
 client.on('message', message => {
     if (message.content === '$help') {
     	message.reply('$ping: Pong!');
+    if(message.content.startsWith("ping")) {
+        message.channel.send("Pong! " + (new Date().getTime() - message.createdTimestamp + " ms"))        
   	}
 });
 // THIS  MUST  BE  THIS  WAY
