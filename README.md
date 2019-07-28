@@ -1,1 +1,2 @@
 # toast-bot
+[![Build Status]
