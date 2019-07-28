@@ -5,15 +5,10 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.on('message', message => {
-    if (message.content === '$ping') {
-    	message.reply('pong');
-  	}
-});
 
 client.on('message', message => {
   
-    if(message.content.startsWith("ping")) {
+    if(message.content.startsWith("$ping")) {
         message.channel.send("Pong! " + (new Date().getTime() - message.createdTimestamp + " ms"))        
   	}
 });
